@@ -72,3 +72,4 @@
 #  => 182 
 # 3.2.0 :024 > 
 
+new_variable = 'Hello'
