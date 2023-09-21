@@ -38,4 +38,14 @@ my_phone.each do |key, value|
 
 # 🏔 Stretch Goals
 # As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone application.
+def cap_apps hash
+  hash.map do |key|
+   puts key.capitalize
+  end  
+end
+
+p cap_apps (my_phone)
+
+# didnt work
+
 # As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each application.
