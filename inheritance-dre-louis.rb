@@ -40,24 +40,34 @@
 #Superclass
 class Animals 
     attr_accessor :alive, :age
-    def initialize
+    def initialize(name)
+        @name = name
         @alive = 'true'
         @age = 0
     end
-    def happy_birthday
+    def happy_birthday_charles
         @age += 1
+        if @age >= 4
+            @alive = 'false'
+        end
     end 
+    def happy_birthday_lorenzo
+        @age += 1
+        if @age >= 20
+            @alive = 'false'
+        end
+    end
 end 
 
 #object
-guppy = Animals.new
-guppy.happy_birthday
-p guppy
+# guppy = Animals.new
+# guppy.happy_birthday
+# p guppy
 #begin
 #Subclass 
 class Fish < Animals
     attr_accessor :alive, :age
-    def initialize
+    def initialize(name)
         super
         @blood_type = 'cold blooded'
     end
@@ -65,12 +75,72 @@ end
 
 #Another subclass, that inherits from subclass Fish 
 class Salmon < Fish
-    def initialize
+    def initialize(name)
         super
         @species = 'Atlantic'
     end
 end 
 
-charles = Salmon.new
+charles = Salmon.new('charles')
 p charles
-#end
+
+charles.happy_birthday_charles
+charles.happy_birthday_charles
+charles.happy_birthday_charles
+charles.happy_birthday_charles
+p charles
+
+class Mammal < Animals
+    def initialize(name)
+        super
+        @blood_type = 'warm blooded'
+    end
+end
+
+class Bear < Mammal
+     def initialize(name)
+        super
+     end
+end
+
+lorenzo = Bear.new('lorenzo')
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+lorenzo.happy_birthday_lorenzo
+p lorenzo
+
+class Bats < Mammal
+    def initialize(name)
+        super
+        @ability = 'fly'
+    end
+    def statement
+        p "hey im #{@name} and i can #{@ability}!"
+    end
+end
+
+rouge = Bats.new('Rouge')
+rouge.statement
+# we tried 
+# my_animals = subclasses.map{|subclass|subclass.new(our_animals)}
+# my_animals.each do |Animals|
+#     p my_animals
+# end
+
