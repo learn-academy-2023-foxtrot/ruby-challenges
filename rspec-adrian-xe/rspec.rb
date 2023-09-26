@@ -13,8 +13,8 @@ class Task
     end
 
     def to_s
-        result = "Title: #{@title} Description: #{@description} Status: {@status}"
-        result += "Due Date: #{due_date}" if @due_date
+        result = "Title: #{@title} Description: #{@description} Status: #{@status}"
+        result += "Due Date: #{@due_date}" if @due_date
         result
     end
 end
