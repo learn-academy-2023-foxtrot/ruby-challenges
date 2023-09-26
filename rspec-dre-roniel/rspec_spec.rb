@@ -34,4 +34,18 @@ describe Task do
     expected_due_date = (Date.today + 1).strftime('%Y-%m-%d')
         expect(my_task.due_date_change).to eq expected_due_date
    end 
+
+   
 end 
+
+describe TaskList do
+    it 'has to be real' do 
+        expect{TaskList.new}.to_not raise_error
+    end  
+    
+    it 'print completed task'do
+
+    my_task_list = TaskList.new
+    my_task_list
+    end
+end
