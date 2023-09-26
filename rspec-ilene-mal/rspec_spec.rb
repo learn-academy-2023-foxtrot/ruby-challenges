@@ -4,6 +4,7 @@ require 'date'
 
 describe 'Task' do
     it 'has to be real' do
+        p Task.new
         expect{Task.new}.to_not raise_error
     end
     it 'has a title' do 
@@ -33,5 +34,11 @@ describe 'Task' do
         my_task.due_date = Date.new(2023, 9, 26)
         expect(my_task.due_date).to be_a Object
         expect(my_task.due_date).to eq Date.new(2023, 9, 26)
+    end
+end
+
+describe 'TaskList' do
+    it 'has to be real' do
+    expect{TaskList.new}.to_not raise_error
     end
 end
