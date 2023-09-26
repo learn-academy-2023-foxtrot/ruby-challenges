@@ -1,14 +1,20 @@
 # As a developer, I can create a Task.
+require 'date'
 class Task 
-    attr_accessor :title, :description, :status
+    attr_accessor :title, :description, :status, :date
     def initialize 
         @title = title
         @description = description
         @status = 'in progress'
+        @date = date
     end
     def done task_done
         @status = task_done
     end
+    # def due due_date 
+    #     @date = Date.
+    #     strftime(due_date, '%Y/%m/%d')
+    # end
 end
 
 # As a developer, I can give a Task a title and retrieve it.
@@ -20,9 +26,13 @@ end
 # ...
 
 # As a developer, I can mark a Task done. Tasks should be initialized as 'in progress'.
+#....
 
 # As a developer, when I print a Task that is done, its status is shown.
+#.....
+
 # As a developer, I can give a Task a due date. Hint: Use the built-in Ruby Date class.
+
 # 🏔 Stretch Goals
 
 # As a developer, I can add all of my Tasks to a TaskList.
