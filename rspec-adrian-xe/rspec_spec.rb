@@ -49,17 +49,17 @@ describe 'Task' do
         expect(my_task.status).to eq 'done'
     end
 
-    # it 'displays status when done' do
-    #     my_task = Task.new
-    #     my_task.mark_done
-    #     expect(my_task.to_s).to include('Status: done')
-    # end
+    it 'displays status when done' do
+        my_task = Task.new
+        my_task.mark_done
+        expect(my_task.to_s).to include('Status: done')
+    end
 
-    # it 'has a due date' do
-    #     my_task = Task.new
-    #     due_date = '2023-09-30'
-    #     my_task.due_date = due_date
-    #     expect(my_task.due_date).to be_a String
-    #     expect(my_task.due_date).to eq due_date
-    # end
+    it 'has a due date' do
+        my_task = Task.new
+        due_date = '2023-09-30'
+        my_task.due_date = due_date
+        expect(my_task.due_date).to be_a String
+        expect(my_task.due_date).to eq due_date
+    end
 end

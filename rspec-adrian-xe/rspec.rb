@@ -9,7 +9,7 @@ class Task
     end
 
     def mark_done
-        @status = done
+        @status = 'done'
     end
 
     def to_s
